@@ -4,7 +4,8 @@ Resource    ../Resources/RegistrationKeywords.robot
 
 
 *** Variables ***
-${browser}  firefox
+#${browser}  firefox
+${browser}  chrome
 ${url}  https://demo.guru99.com/test/newtours/index.php
 ${fname}    John
 ${lname}    Doe
