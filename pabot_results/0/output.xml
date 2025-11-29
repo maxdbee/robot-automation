@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.11.9 on win32)" generated="2025-11-29T06:16:27.010107" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="LoginTest" source="C:\Users\maxdb\PycharmProjects\JenkinsTest\TestCases\LoginTest.robot">
+<test id="s1-s1-t1" name="Verify login with valid credentials" line="13">
+<kw name="Open my browser" owner="LoginKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-29T06:16:27.756528" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/index.php'.</msg>
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-29T06:16:27.756528" elapsed="4.319691"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-29T06:16:32.076219" elapsed="0.041231"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2025-11-29T06:16:27.754523" elapsed="4.363441"/>
+</kw>
+<kw name="Enter username" owner="LoginKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${txt_login_userName}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-29T06:16:32.119977" elapsed="0.045561"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-29T06:16:32.167539" level="INFO">Typing text 'user' into text field 'name:userName'.</msg>
+<arg>${txt_login_userName}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-29T06:16:32.165538" elapsed="0.188553"/>
+</kw>
+<arg>${user}</arg>
+<status status="PASS" start="2025-11-29T06:16:32.117964" elapsed="0.236127"/>
+</kw>
+<kw name="Enter password" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-29T06:16:32.355630" level="INFO">Typing text 'user' into text field 'name:password'.</msg>
+<arg>${txt_login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-29T06:16:32.354091" elapsed="0.104917"/>
+</kw>
+<arg>${pswd}</arg>
+<status status="PASS" start="2025-11-29T06:16:32.354091" elapsed="0.104917"/>
+</kw>
+<kw name="Click sign-in" owner="LoginKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-29T06:16:32.460025" level="INFO">Clicking element 'name:submit'.</msg>
+<arg>${btn_sign_in}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-29T06:16:32.460025" elapsed="0.106117"/>
+</kw>
+<status status="PASS" start="2025-11-29T06:16:32.459008" elapsed="0.107134"/>
+</kw>
+<kw name="Verify successful login" owner="LoginKeywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-29T06:16:34.569754" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-29T06:16:32.568142" elapsed="2.001612"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-11-29T06:16:34.584634" level="INFO">Page title is 'Login: Mercury Tours'.</msg>
+<arg>Login: Mercury Tours</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-11-29T06:16:34.569754" elapsed="0.014880"/>
+</kw>
+<status status="PASS" start="2025-11-29T06:16:32.567142" elapsed="2.017492"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-29T06:16:34.585154" elapsed="2.230835"/>
+</kw>
+<status status="PASS" start="2025-11-29T06:16:27.753524" elapsed="9.062465"/>
+</test>
+<status status="PASS" start="2025-11-29T06:16:27.089775" elapsed="9.727240"/>
+</suite>
+<status status="PASS" start="2025-11-29T06:16:27.063990" elapsed="9.754024"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Suites" id="s1" pass="1" fail="0" skip="0">Suites</stat>
+<stat name="LoginTest" id="s1-s1" pass="1" fail="0" skip="0">Suites.LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

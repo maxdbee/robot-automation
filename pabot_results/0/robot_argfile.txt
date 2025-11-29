@@ -1,0 +1,18 @@
+--name Suites
+--suite Suites.LoginTest
+--variable CALLER_ID:1eff4d206756481e804c1e4e50431ea6
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:1
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:2
+--variable PABOTQUEUEINDEX:0
+--variable PABOTLASTLEVEL:Suites.LoginTest
+--listener RobotStackTracer
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\0
+--consolecolors off
+--consolemarkers off
+.\TestCases\LoginTest.robot
+.\TestCases\RegistrationTest.robot

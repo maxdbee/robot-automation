@@ -1,0 +1,21 @@
+#Login Page Elements
+txt_login_userName="name:userName"
+txt_login_password="name:password"
+btn_sign_in="name:submit"
+
+#Registration Page Elements
+link_reg="link:REGISTER"
+txt_first_name="name:firstName"
+txt_last_name="name:lastName"
+txt_phone_number="name:phone"
+txt_email="id:userName"
+txt_add1="name:address1"
+txt_add2="name:address2"
+txt_city="name:city"
+txt_state="name:state"
+txt_post_code="name:postalCode"
+drp_country="name:country"
+txt_username="name:email"
+txt_password="name:password"
+txt_confirm_password="name:confirmPassword"
+btn_submit="name:submit"
