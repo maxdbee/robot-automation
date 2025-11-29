@@ -5,15 +5,15 @@ pipeline {
         stage('Test') {
             agent {
                 docker {
-                    image 'ppodgorsek/robot-framework:latest'
-                    reuseNode true    // same idea as your working example
+                    image 'selenium/standalone-chrome:latest'
+                    args '-u root'   // important for pip install
+                    reuseNode true
                 }
             }
             steps {
                 sh '''
-                    pip install robotframework-pabot
-                    echo "Starting test processes!!!...😎"
-                    pabot --processes 2 ./TestCases/*.robot
+                    pip install robotframework robotframework-seleniumlibrary
+                    robot -d results tests/
                 '''
             }
         }
