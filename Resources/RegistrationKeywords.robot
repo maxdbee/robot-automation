@@ -6,7 +6,7 @@ Variables   ../PageObjects/locators.py
 *** Keywords ***
 Open my browser
     [Arguments]     ${site_url}     ${browser}
-    Open Browser    ${site_url}     ${browser}
+    Open Browser    ${site_url}     headless${browser}
 #    Maximize Browser Window
 
 Click registration link
