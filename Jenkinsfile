@@ -1,38 +1,23 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:3.11'
-        }
-    }
+    agent any   // Jenkins now checks out your repo automatically
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
+        stage('Test') {
+            agent {
+                docker {
+                    image 'ppodgorsek/robot-framework:latest'
+                    reuseNode true    // same idea as your working example
+                }
             }
-        }
-
-        stage('Install') {
             steps {
                 sh '''
-                    pip install robotframework
-                    pip install robotframework-seleniumlibrary
-                    pip install selenium
                     pip install robotframework-pabot
+                    echo "Starting test processes!!!...😎"
+                    pabot --processes 2 ./TestCases/*.robot
                 '''
-            }
-        }
-
-        stage('Test') {
-            steps {
-                sh 'robot -d results tests/'
-            }
-        }
-
-        stage('Report') {
-            steps {
-                robot outputPath: 'results'
             }
         }
     }
 }
+
+
