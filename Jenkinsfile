@@ -13,11 +13,9 @@ pipeline {
             steps {
                 sh '''
                     pip install robotframework robotframework-seleniumlibrary
-                    robot -d results tests/
+                    robot ./TestCases/*.robot
                 '''
             }
         }
     }
 }
-
-
